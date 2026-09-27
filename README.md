@@ -14,11 +14,12 @@ Caso académico: la institución recibe datos de estudiantes, asignaturas, matr�
 
 | Integrante | GitHub | Módulo | Hito 1 |
 |---|---|---|---|
-| Kerly | kerlyespinoza298-dev | Extract + Cola | `Cola`, `Extract` (lectura UTF-8) |
-| Esteban | Esteban_11CAD (Esteban-EVIL) | Listas + Modelo + Transform | `Nodo`, `ListaEnlazada`, `ListaSecuencial`, clases de `model`, `Transform` |
-| Gabriel | Gabriel143445 | Pila + Errores + Load + Dataset | `Pila`, `ErrorETL`, archivos CSV |
-| Sebastián | sr632252-crypto | BST + Búsqueda + Ordenamiento | Arquitectura y modelo de clases en `docs/` |
+| Kerly | @kerlyespinoza298-dev | Extract + Cola | `Cola`, `Extract` (lectura UTF-8) |
+| Esteban | @Esteban-EVIL | Listas + Modelo + Transform | `Nodo`, `ListaEnlazada`, `ListaSecuencial`, clases de `model`, `Transform` |
+| Gabriel | @Gabriel143445 | Pila + Errores + Load + Dataset | `Pila`, `ErrorETL`, archivos CSV |
+| Sebastián | @sr632252-crypto | BST + Búsqueda + Ordenamiento | Arquitectura y modelo de clases en `docs/` |
 | Rommel | @gamboarommel580-rgb | Grafo + BFS/DFS + Integración | Estructura del repositorio, `Main`, revisión de PR |
+
 
 Todos los integrantes participan en pruebas, documentación, flujogramas de IA y defensa.
 
