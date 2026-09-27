@@ -1,3 +1,19 @@
-node_modules/
-.env
+# Compilados y salidas de Java
+bin/
+out/
+*.class
+sources.txt
+
+# Salidas generadas al ejecutar el programa
+output/
 *.log
+
+# Secretos (clave de API de IA)
+.env
+
+# Configuración del IDE y del sistema
+.vscode/
+.idea/
+*.iml
+Thumbs.db
+.DS_Store
