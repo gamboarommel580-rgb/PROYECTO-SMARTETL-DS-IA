@@ -40,7 +40,13 @@ public class Cola<T> {
         tamanio--;
         return datoExtraido;
     }
-
+    // Retorna el primer elemento sin retirarlo de la cola
+    public T frente() {
+        if (frente == null) {
+            return null;
+        }
+        return frente.dato;
+    }
     // Retorna la cantidad de elementos en la cola
     public int tamanio() {
         return tamanio;
