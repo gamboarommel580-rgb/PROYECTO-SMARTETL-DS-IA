@@ -1,28 +1,44 @@
 package model;
 
-/** Describe un registro rechazado durante la transformación de datos. */
+/** Error detectado durante la fase Transform; se almacena en la pila de errores. */
 public class ErrorETL {
-    private final String fuente;
-    private final String id;
-    private final String motivo;
-    private final String detalle;
 
-    /** Conserva el origen, identificador y explicación del error. */
-    public ErrorETL(String fuente, String id, String motivo, String detalle) {
+    private String fuente;
+    private String identificador;
+    private String motivo;
+    private String detalle;
+
+    /**
+     * @param fuente        archivo donde ocurrió el error (ej. estudiantes.csv)
+     * @param identificador ID o código del registro con error
+     * @param motivo        categoría del error (ej. DUPLICADO, RANGO_EDAD)
+     * @param detalle       explicación legible del error
+     */
+    public ErrorETL(String fuente, String identificador, String motivo, String detalle) {
         this.fuente = fuente;
-        this.id = id;
+        this.identificador = identificador;
         this.motivo = motivo;
         this.detalle = detalle;
     }
 
-    /** Devuelve el tipo de error usado en las estadísticas del ETL. */
+    public String getFuente() {
+        return fuente;
+    }
+
+    public String getIdentificador() {
+        return identificador;
+    }
+
     public String getMotivo() {
         return motivo;
     }
 
-    /** Produce una línea legible para pantalla y para errores_etl.txt. */
+    public String getDetalle() {
+        return detalle;
+    }
+
     @Override
     public String toString() {
-        return "[" + motivo + "] " + fuente + " | " + id + " | " + detalle;
+        return "[" + motivo + "] " + fuente + " | " + identificador + " | " + detalle;
     }
 }
