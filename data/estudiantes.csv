@@ -1,0 +1,11 @@
+id,nombres,apellidos,edad,carrera,semestre,promedio
+0000000001,Alumno01,Ejemplo,20,Ingenieria de Software,3,9.20
+0000000002,Alumno02,Ejemplo,21,Ingenieria de Software,4,8.50
+0000000003,Alumno03,Ejemplo,19,Ingenieria de Software,2,9.70
+0000000004,Alumno04,Ejemplo,22,Ingenieria de Software,5,7.80
+0000000005,Alumno05,Ejemplo,20,Ingenieria de Software,3,8.90
+0000000005,Alumno05,Ejemplo,20,Ingenieria de Software,3,8.90
+0000000006,Alumno06,Ejemplo,15,Ingenieria de Software,1,8.00
+0000000007,Alumno07,Ejemplo,23,Ingenieria de Software,6,10.50
+ID_INVALIDO,Alumno08,Ejemplo,20,Ingenieria de Software,3,8.10
+0000000009,,Ejemplo,21,Ingenieria de Software,3,8.20
