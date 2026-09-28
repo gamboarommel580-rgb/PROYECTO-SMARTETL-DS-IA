@@ -64,10 +64,20 @@ output/           Resultados generados al ejecutar (no se sube al repositorio)
 Requiere **JDK 17 o superior**. Ejecutar desde la raíz del proyecto:
 
 ```powershell
-Get-ChildItem -Recurse src -Filter *.java | ForEach-Object { $_.FullName } > sources.txt
+# Generar la lista de archivos (ASCII y rutas relativas, para que javac pueda leerla)
+Get-ChildItem -Recurse src, tests -Filter *.java | Resolve-Path -Relative | ForEach-Object { $_ -replace '\\','/' } | Set-Content -Encoding ascii sources.txt
+
+# Compilar
 javac -encoding UTF-8 -d bin "@sources.txt"
+
+# Ejecutar el programa
 java -cp bin Main
+
+# Ejecutar la prueba de integración
+java -cp bin ETLIntegrationTest
 ```
+
+Si las tildes se ven mal en la consola, ejecuta `chcp 65001` antes de `java`.
 
 ## Reglas de implementación
 
