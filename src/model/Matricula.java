@@ -1,0 +1,2 @@
+package model;
+public class Matricula { private String estudiante,asignatura,periodo,estado; public Matricula(String e,String a,String p,String s){estudiante=e;asignatura=a;periodo=p;estado=s;} public String getEstudiante(){return estudiante;} public String getAsignatura(){return asignatura;} public String toCsv(){return estudiante+","+asignatura+","+periodo+","+estado;} public String toString(){return estudiante+" -> "+asignatura+" | "+periodo+" | "+estado;} }

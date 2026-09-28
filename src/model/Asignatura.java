@@ -1,0 +1,2 @@
+package model;
+public class Asignatura { private String codigo,nombre; private int nivel,creditos; public Asignatura(String c,String n,int ni,int cr){codigo=c;nombre=n;nivel=ni;creditos=cr;} public String getCodigo(){return codigo;} public String getNombre(){return nombre;} public int getNivel(){return nivel;} public int getCreditos(){return creditos;} public String toCsv(){return codigo+","+nombre+","+nivel+","+creditos;} public String toString(){return codigo+" | "+nombre+" | nivel="+nivel+" | créditos="+creditos;} }
