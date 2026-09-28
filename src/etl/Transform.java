@@ -104,7 +104,7 @@ public class Transform {
                 double promedio = Double.parseDouble(campos[6].trim());
 
                 if (!id.matches("\\d{10}")) {
-                    registrarError(ARCHIVO_ESTUDIANTES, id, "IDENTIFICADOR_INCORRECTO", "10 dígitos requeridos");
+                    registrarError(ARCHIVO_ESTUDIANTES, id, "IDENTIFICADOR_INCORRECTO", "10 digitos requeridos");
                     continue;
                 }
                 // add() devuelve false si el ID ya estaba registrado
@@ -129,14 +129,14 @@ public class Transform {
                 String apellidos = normalizar(campos[2]);
                 String carrera = normalizar(campos[4]);
                 if (nombres.isEmpty() || apellidos.isEmpty() || carrera.isEmpty()) {
-                    registrarError(ARCHIVO_ESTUDIANTES, id, "CAMPO_OBLIGATORIO", "Campo vacío");
+                    registrarError(ARCHIVO_ESTUDIANTES, id, "CAMPO_OBLIGATORIO", "Campo vacio");
                     continue;
                 }
 
                 estudiantes.insertarFinal(
                         new Estudiante(id, nombres, apellidos, edad, carrera, semestre, promedio));
             } catch (NumberFormatException e) {
-                registrarError(ARCHIVO_ESTUDIANTES, id, "FORMATO_NUMERICO", "Dato numérico inválido");
+                registrarError(ARCHIVO_ESTUDIANTES, id, "FORMATO_NUMERICO", "Dato numerico invalido");
             }
         }
     }
@@ -157,12 +157,12 @@ public class Transform {
                 int creditos = Integer.parseInt(campos[3].trim());
 
                 if (!codigosRegistrados.add(codigo)) {
-                    registrarError(ARCHIVO_ASIGNATURAS, codigo, "DUPLICADO", "Código repetido");
+                    registrarError(ARCHIVO_ASIGNATURAS, codigo, "DUPLICADO", "Codigo repetido");
                     continue;
                 }
                 asignaturas.insertarFinal(new Asignatura(codigo, normalizar(campos[1]), nivel, creditos));
             } catch (NumberFormatException e) {
-                registrarError(ARCHIVO_ASIGNATURAS, codigo, "FORMATO_NUMERICO", "Dato numérico inválido");
+                registrarError(ARCHIVO_ASIGNATURAS, codigo, "FORMATO_NUMERICO", "Dato numerico invalido");
             }
         }
     }

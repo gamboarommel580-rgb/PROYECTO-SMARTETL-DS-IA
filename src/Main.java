@@ -40,7 +40,7 @@ public class Main {
                 case 4 -> buscarEstudiantePorId(lector);
                 case 5 -> mostrarResumen();
                 case 0 -> System.out.println("Saliendo del sistema...");
-                default -> System.out.println("Opción no válida. Intente de nuevo.");
+                default -> System.out.println("Opcion no valida. Intente de nuevo.");
             }
         } while (opcion != 0);
  
@@ -54,12 +54,12 @@ public class Main {
         System.out.println("     SMARTETL-DS + IA  |  Hito 1");
         System.out.println("==============================================");
         System.out.println(" 1. Ejecutar ETL (Extract + Transform)");
-        System.out.println(" 2. Mostrar estudiantes válidos (lista)");
+        System.out.println(" 2. Mostrar estudiantes validos (lista)");
         System.out.println(" 3. Mostrar pila de errores");
         System.out.println(" 4. Buscar estudiante por ID");
         System.out.println(" 5. Resumen del proceso");
         System.out.println(" 0. Salir");
-        System.out.print("Seleccione una opción: ");
+        System.out.print("Seleccione una opcion: ");
     }
  
     /** Lee una opción numérica; devuelve -1 si el usuario escribe algo no numérico. */
@@ -98,7 +98,7 @@ public class Main {
         if (!etlEjecutado()) {
             return;
         }
-        System.out.println("--- Estudiantes válidos (" + transformacion.estudiantes.tamanio() + ") ---");
+        System.out.println("--- Estudiantes validos (" + transformacion.estudiantes.tamanio() + ") ---");
         transformacion.estudiantes.mostrar();
     }
  
@@ -123,11 +123,11 @@ public class Main {
         for (int i = 0; i < lista.tamanio(); i++) {
             Estudiante actual = lista.obtener(i);
             if (actual.getId().equals(idBuscado)) {
-                System.out.println("Encontrado en la posición " + i + ": " + actual);
+                System.out.println("Encontrado en la posicion " + i + ": " + actual);
                 return;
             }
         }
-        System.out.println("No existe un estudiante válido con ID " + idBuscado + ".");
+        System.out.println("No existe un estudiante valido con ID " + idBuscado + ".");
     }
  
     /** Muestra cantidades de registros válidos y errores por categoría. */
@@ -136,9 +136,9 @@ public class Main {
             return;
         }
         System.out.println("--- Resumen del ETL ---");
-        System.out.println("Estudiantes válidos:  " + transformacion.estudiantes.tamanio());
-        System.out.println("Asignaturas válidas:  " + transformacion.asignaturas.tamanio());
-        System.out.println("Matrículas válidas:   " + transformacion.matriculas.tamanio());
+        System.out.println("Estudiantes validos:  " + transformacion.estudiantes.tamanio());
+        System.out.println("Asignaturas validas:  " + transformacion.asignaturas.tamanio());
+        System.out.println("Matriculas validas:   " + transformacion.matriculas.tamanio());
         System.out.println("Prerrequisitos:       " + transformacion.prerequisitos.tamanio());
         System.out.println("Errores detectados:   " + transformacion.errores.tamanio());
         for (Map.Entry<String, Integer> categoria : transformacion.stats.entrySet()) {
@@ -149,7 +149,7 @@ public class Main {
     /** Evita NullPointerException si el usuario consulta antes de ejecutar el ETL. */
     private static boolean etlEjecutado() {
         if (transformacion == null) {
-            System.out.println("Primero ejecute la opción 1 (Ejecutar ETL).");
+            System.out.println("Primero ejecute la opcion 1 (Ejecutar ETL).");
             return false;
         }
         return true;
