@@ -36,7 +36,7 @@ public class ListaSecuencial<T> {
     @SuppressWarnings("unchecked")
     public T obtener(int posicion) {
         if (posicion < 0 || posicion >= tamanio) {
-            throw new IndexOutOfBoundsException("Posición fuera de rango: " + posicion);
+            throw new IndexOutOfBoundsException("Posicion fuera de rango: " + posicion);
         }
         return (T) elementos[posicion];
     }

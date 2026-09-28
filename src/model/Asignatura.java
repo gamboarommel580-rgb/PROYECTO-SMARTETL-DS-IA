@@ -39,6 +39,6 @@ public class Asignatura {
 
     @Override
     public String toString() {
-        return codigo + " | " + nombre + " | nivel=" + nivel + " | créditos=" + creditos;
+        return codigo + " | " + nombre + " | nivel=" + nivel + " | creditos=" + creditos;
     }
 }

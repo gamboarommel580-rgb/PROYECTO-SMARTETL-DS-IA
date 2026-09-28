@@ -55,7 +55,7 @@ public class ListaEnlazada<T> {
      */
     public T obtener(int posicion) {
         if (posicion < 0 || posicion >= tamanio) {
-            throw new IndexOutOfBoundsException("Posición fuera de rango: " + posicion);
+            throw new IndexOutOfBoundsException("Posicion fuera de rango: " + posicion);
         }
         Nodo<T> actual = cabeza;
         for (int i = 0; i < posicion; i++) {
