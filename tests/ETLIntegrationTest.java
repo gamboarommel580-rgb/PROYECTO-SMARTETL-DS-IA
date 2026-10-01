@@ -17,11 +17,7 @@ public class ETLIntegrationTest {
         comprobar("segundo".equals(pila.desapilar()), "desapilar LIFO");
         comprobar("primero".equals(pila.desapilar()) && pila.estaVacia(), "pila vacía");
 
-        Transform transformacion = new Transform();
-        transformacion.estudiantes(Extract.leerCSV("data/estudiantes.csv"));
-        transformacion.asignaturas(Extract.leerCSV("data/asignaturas.csv"));
-        transformacion.matriculas(Extract.leerCSV("data/matriculas.csv"));
-        transformacion.prerequisitos(Extract.leerCSV("data/prerrequisitos.csv"));
+
 
         comprobar(transformacion.estudiantes.tamanio() == 5, "estudiantes válidos");
         comprobar(transformacion.errores.tamanio() == 8, "errores de entrada");
