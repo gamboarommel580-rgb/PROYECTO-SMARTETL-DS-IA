@@ -97,7 +97,7 @@ Si las tildes se ven mal en la consola, ejecuta `chcp 65001` antes de `java`.
 
 | Hito | Fecha | Alcance | Estado |
 |---|---|---|---|
-| 1 | 01 oct. | Extract + Lista + arquitectura | Comoleto |
+| 1 | 01 oct. | Extract + Lista + arquitectura | Copletado |
 | 2 | 16 oct. | ETL: Cola, Transform, Pila |  Pendiente |
 | 3 | 30 oct. | Load, búsqueda, ordenamiento |  Pendiente |
 | 4A | 13 nov. | Árbol BST y recorridos | Pendiente |
