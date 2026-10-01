@@ -97,14 +97,21 @@ Si las tildes se ven mal en la consola, ejecuta `chcp 65001` antes de `java`.
 
 | Hito | Fecha | Alcance | Estado |
 |---|---|---|---|
-| 1 | 01 oct. | Extract + Lista + arquitectura | 🔄 En curso |
-| 2 | 16 oct. | ETL: Cola, Transform, Pila | ⏳ Pendiente |
-| 3 | 30 oct. | Load, búsqueda, ordenamiento | ⏳ Pendiente |
-| 4A | 13 nov. | Árbol BST y recorridos | ⏳ Pendiente |
-| 4B | 25 nov. | Grafo, BFS, DFS, rutas y ciclos | ⏳ Pendiente |
-| 5 | 30 nov. | IA y flujogramas automáticos | ⏳ Pendiente |
-| Final | 04 dic. | Integración y defensa | ⏳ Pendiente |
+| 1 | 01 oct. | Extract + Lista + arquitectura | Copletado |
+| 2 | 16 oct. | ETL: Cola, Transform, Pila |  Pendiente |
+| 3 | 30 oct. | Load, búsqueda, ordenamiento |  Pendiente |
+| 4A | 13 nov. | Árbol BST y recorridos | Pendiente |
+| 4B | 25 nov. | Grafo, BFS, DFS, rutas y ciclos |  Pendiente |
+| 5 | 30 nov. | IA y flujogramas automáticos |  Pendiente |
+| Final | 04 dic. | Integración y defensa |  Pendiente |
 
 ## Uso de Inteligencia Artificial
 
-En esta sección se documentará qué partes del proyecto se apoyaron en IA, los prompts utilizados y los ajustes realizados, según exige la guía del proyecto.
+Durante el Hito 1 el equipo utilizó un asistente de IA generativa (Claude, de Anthropic) como apoyo en:
+
+- Revisión del código y detección de errores (validación de duplicados, codificación de archivos, compilación en Windows).
+- Formateo, comentarios y nombres descriptivos en el código base.
+- Redacción inicial del menú del Hito 1 y de la plantilla del documento de arquitectura.
+- Organización del flujo de trabajo en GitHub (ramas, Issues y Pull Requests).
+
+Algunos commits muestran a la IA como coautora. Todo el contenido fue revisado, probado e integrado por el equipo, y cada integrante es responsable de explicar la parte que tiene asignada. Las estructuras de datos se implementaron sin usar colecciones de Java en el núcleo, como exige la guía.
